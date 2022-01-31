@@ -1,0 +1,197 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    counter-reset: killer;
+    background: url("img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+    position: relative;
+    cursor: url("img/pngwing.com.png"), crosshair;
+    overflow: hidden;
+}
+.duck input[type="checkbox"]:checked {
+    counter-increment: killer;
+}
+
+input[type="checkbox"]:checked + label {
+    display: none;
+}
+
+.summa::after {
+    content: counter(killer);
+    color: red;
+}
+
+.summa {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    transform: translateX(-50%);
+}
+
+.duck {
+    width: 62px;
+    height: 56px;
+
+    position: relative;
+    overflow: hidden;
+    left: -80px;
+    top: 450px;
+}
+
+input {
+    position: absolute;
+    left: -50px;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/duck_hunt_bird_big2.gif");
+    background-repeat: no-repeat;
+    cursor: url("img/pngwing.com.png"), crosshair;
+}
+
+.duck1 {
+    animation: fly1 5s 0.5s;
+    animation-iteration-count: 3;
+}
+
+.duck2 {
+    transform: scale(-1, 1);
+    animation: fly2 15s 3s;
+    animation-iteration-count: infinite;
+}
+
+.duck3 {
+    animation: fly1 9s 5s;
+    animation-iteration-count: infinite;
+}
+.duck4 {
+    transform: scale(-1, 1);
+    animation: fly2 4s 9s;
+    animation-timing-function: cubic-bezier(0, 0.69, 0.18, 0.75);
+    animation-iteration-count: infinite;
+}
+.duck5 {
+    animation: fly3 5s 5s;
+    animation-iteration-count: infinite;
+}
+.duck6 {
+    transform: scale(-1, 1);
+    animation: fly4 4s 7s;
+    animation-iteration-count: infinite;
+}
+.duck7 {
+    animation: fly3 2s 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes fly1 {
+    0% {
+        left: 0%;
+        top: 400px;
+    }
+    25% {
+        left: 25%;
+        bottom: 500px;
+    }
+    50% {
+        left: 50%;
+        top: 120px;
+    }
+    75% {
+        left: 75%;
+        bottom: 600px;
+    }
+    100% {
+        left: 110%;
+        top: 250px;
+    }
+}
+
+@keyframes fly2 {
+    100% {
+        left: 0%;
+        top: 400px;
+    }
+    75% {
+        left: 25%;
+        bottom: 500px;
+    }
+    50% {
+        left: 50%;
+        top: 120px;
+    }
+    25% {
+        left: 75%;
+        bottom: 600px;
+    }
+    0% {
+        left: 110%;
+        top: 250px;
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        left: 0%;
+        top: 200px;
+    }
+    25% {
+        left: 25%;
+        bottom: 800px;
+    }
+    50% {
+        left: 50%;
+        top: 20px;
+    }
+    75% {
+        left: 75%;
+        bottom: 400px;
+    }
+    100% {
+        left: 110%;
+        top: 450px;
+    }
+}
+
+@keyframes fly4 {
+    100% {
+        left: 0%;
+        top: 450px;
+    }
+    75% {
+        left: 25%;
+        bottom: 400px;
+    }
+    50% {
+        left: 50%;
+        top: 20px;
+    }
+    25% {
+        left: 75%;
+        bottom: 800px;
+    }
+    0% {
+        left: 110%;
+        top: 200px;
+    }
+}
